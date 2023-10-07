@@ -1,3 +1,4 @@
+import 'package:bookly/Features/Home/presentation/Views/widgets/HomeViewBody.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -6,12 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text(
-          'khaled',
-          style: TextStyle(),
-        ),
-      ),
+      body: HomeViewBody(),
     );
   }
 }
