@@ -2,7 +2,6 @@ import 'package:bookly/Core/utils/assets.dart';
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/customBookRate.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSillerListViewItems extends StatelessWidget {
   const BestSillerListViewItems({super.key});
