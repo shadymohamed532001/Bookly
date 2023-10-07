@@ -1,4 +1,5 @@
 import 'package:bookly/Core/utils/styles.dart';
+import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListViewItems.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomAppBar.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListView.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +20,10 @@ class HomeViewBody extends StatelessWidget {
           padding: EdgeInsets.all(10),
           child: Text(
             'Best Siller',
-            style: booklyStlyes.tittleMedia,
+            style: booklyStlyes.textStyle22,
           ),
-        )
+        ),
+        const BestSillerListViewItems()
       ],
     );
   }

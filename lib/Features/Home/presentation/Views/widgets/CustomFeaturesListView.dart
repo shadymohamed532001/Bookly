@@ -1,4 +1,4 @@
-import 'package:bookly/Features/Home/presentation/Views/widgets/CustomListViewItems.dart';
+import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListViewItems.dart';
 import 'package:flutter/material.dart';
 
 class CustomFeaturesListView extends StatelessWidget {
@@ -12,7 +12,7 @@ class CustomFeaturesListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 20,
         itemBuilder: (context, index) {
-          return const CustomListViewItems();
+          return const CustomFeaturesListViewItems();
         },
       ),
     );
