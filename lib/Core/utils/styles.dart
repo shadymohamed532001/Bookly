@@ -6,6 +6,11 @@ abstract class booklyStlyes {
     fontWeight: FontWeight.w700,
   );
 
+   static const textStyle24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+  );
+
   static const textStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
