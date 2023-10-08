@@ -1,6 +1,5 @@
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListView.dart';
-import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListViewItems.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomAppBar.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListView.dart';
 import 'package:flutter/material.dart';

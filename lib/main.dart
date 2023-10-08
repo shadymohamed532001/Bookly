@@ -1,7 +1,6 @@
 import 'package:bookly/Constance.dart';
-import 'package:bookly/Features/splash/presentation/Views/splashView.dart';
+import 'package:bookly/Core/utils/appRouters.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -14,7 +13,8 @@ class Bookly extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kprimayColor,
         textTheme: GoogleFonts.montserratTextTheme(
@@ -22,7 +22,7 @@ class Bookly extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashView(),
+      // home: const SplashView(),
     );
   }
 }
