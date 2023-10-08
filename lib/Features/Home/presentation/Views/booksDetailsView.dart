@@ -1,3 +1,4 @@
+import 'package:bookly/Features/Home/presentation/Views/widgets/booksDetailsViewBody.dart';
 import 'package:flutter/material.dart';
 
 class booksDetailsView extends StatelessWidget {
@@ -5,6 +6,10 @@ class booksDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      body: SafeArea(
+        child: booksDetailsViewBody(),
+      ),
+    );
   }
 }
