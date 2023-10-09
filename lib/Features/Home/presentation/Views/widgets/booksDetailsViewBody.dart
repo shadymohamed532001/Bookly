@@ -14,75 +14,110 @@ class booksDetailsViewBody
   @override
   Widget
       build(BuildContext context) {
-    return CustomScrollView(
+    return const CustomScrollView(
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: const EdgeInsets.all(9),
+            padding: EdgeInsets.all(9),
             child: Column(
               children: [
-                const CustomDetilsViewAppBar(),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 150,
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width / 1.6,
-                  height: MediaQuery.of(context).size.height / 2.7,
-                  child: const CustomFeaturesListViewItems(),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 50,
-                ),
-                const Text(
-                  'The Jungle Book',
-                  style: booklyStlyes.textStyle30,
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  'Rudyard Kipling',
-                  style: booklyStlyes.textStyle16.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 137, 133, 147),
-                  ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    customBookRate(),
-                  ],
-                ),
-                const SizedBox(
-                  height: 33,
-                ),
-                const CustomBookActions(),
-                const Expanded(
+                BookDetailSections(),
+                Expanded(
                   child: SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'You can also like',
-                    style: booklyStlyes.textStyle18.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                SimilerBookDetilsListViewSections(),
+                SizedBox(
+                  height: 30,
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const SimilerBookDetilsListView()
               ],
             ),
           ),
         )
+      ],
+    );
+  }
+}
+
+class BookDetailSections
+    extends StatelessWidget {
+  const BookDetailSections(
+      {super.key});
+
+  @override
+  Widget
+      build(BuildContext context) {
+    return Column(
+      children: [
+        const CustomDetilsViewAppBar(),
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 150,
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width / 1.6,
+          height: MediaQuery.of(context).size.height / 2.7,
+          child: const CustomListViewItemsphoto(),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 50,
+        ),
+        const Text(
+          'The Jungle Book',
+          style: booklyStlyes.textStyle30,
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Text(
+          'Rudyard Kipling',
+          style: booklyStlyes.textStyle16.copyWith(
+            fontWeight: FontWeight.bold,
+            color: const Color.fromARGB(255, 137, 133, 147),
+          ),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            customBookRate(),
+          ],
+        ),
+        const SizedBox(
+          height: 33,
+        ),
+        const CustomBookActions(),
+      ],
+    );
+  }
+}
+
+class SimilerBookDetilsListViewSections
+    extends StatelessWidget {
+  const SimilerBookDetilsListViewSections(
+      {super.key});
+
+  @override
+  Widget
+      build(BuildContext context) {
+    return Column(
+      children: [
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'You can also like',
+            style: booklyStlyes.textStyle18.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const SimilerBookDetilsListView(),
       ],
     );
   }

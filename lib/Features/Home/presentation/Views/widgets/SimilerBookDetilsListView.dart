@@ -10,12 +10,12 @@ class SimilerBookDetilsListView
   Widget
       build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 5.7,
+      height: MediaQuery.of(context).size.height / 5.9,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const CustomFeaturesListViewItems();
+          return const CustomListViewItemsphoto();
         },
       ),
     );
