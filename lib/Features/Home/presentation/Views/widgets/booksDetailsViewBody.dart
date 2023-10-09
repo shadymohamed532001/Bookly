@@ -2,6 +2,7 @@ import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomBookActions.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomDetilsViewAppBar.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListViewItems.dart';
+import 'package:bookly/Features/Home/presentation/Views/widgets/SimilerBookDetilsListView.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/customBookRate.dart';
 import 'package:flutter/material.dart';
 
@@ -65,42 +66,24 @@ class booksDetailsViewBody
                     height: 50,
                   ),
                 ),
-                Text(
-                  'You can also like',
-                  style: booklyStlyes.textStyle18.copyWith(
-                    fontWeight: FontWeight.bold,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'You can also like',
+                    style: booklyStlyes.textStyle18.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const BookDetilsListView()
+                const SimilerBookDetilsListView()
               ],
             ),
           ),
         )
       ],
-    );
-  }
-}
-
-class BookDetilsListView
-    extends StatelessWidget {
-  const BookDetilsListView(
-      {super.key});
-
-  @override
-  Widget
-      build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height / 5.7,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return const CustomFeaturesListViewItems();
-        },
-      ),
     );
   }
 }

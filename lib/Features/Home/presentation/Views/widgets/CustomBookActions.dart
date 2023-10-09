@@ -32,7 +32,7 @@ class CustomBookActions
                 topRight: Radius.circular(16),
                 bottomRight: Radius.circular(16),
               ),
-              text: '19.99€',
+              text: 'Free preview',
               onPressed: () {},
               textcolor: Colors.white,
               backgroundColor: const Color(0xffEF8262),

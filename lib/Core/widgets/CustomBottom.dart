@@ -27,17 +27,20 @@ class CustomBottom
   @override
   Widget
       build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        backgroundColor: backgroundColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: borderRadius ?? BorderRadius.circular(16),
+    return SizedBox(
+      height: 53,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: backgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: borderRadius ?? BorderRadius.circular(16),
+          ),
         ),
-      ),
-      onPressed: () {},
-      child: Text(
-        text,
-        style: booklyStlyes.textStyle18.copyWith(color: textcolor),
+        onPressed: () {},
+        child: Text(
+          text,
+          style: booklyStlyes.textStyle18.copyWith(color: textcolor),
+        ),
       ),
     );
   }
