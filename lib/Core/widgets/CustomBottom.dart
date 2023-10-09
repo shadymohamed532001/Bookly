@@ -9,14 +9,14 @@ class CustomBottom
     required this.backgroundColor,
     required this.borderRadius,
     this.onPressed,
-    this.textbackGround,
+    this.textcolor,
   });
 
   final BorderRadiusGeometry?
       borderRadius;
 
   final Color?
-      textbackGround;
+      textcolor;
   final String
       text;
   final Color
@@ -37,7 +37,7 @@ class CustomBottom
       onPressed: () {},
       child: Text(
         text,
-        style: booklyStlyes.textStyle18.copyWith(backgroundColor: textbackGround),
+        style: booklyStlyes.textStyle18.copyWith(color: textcolor),
       ),
     );
   }
