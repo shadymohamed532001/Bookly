@@ -1,5 +1,4 @@
 import 'package:bookly/Core/utils/styles.dart';
-import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListViewItems.dart';
 import 'package:bookly/Features/serach/presentation/Views/Widgets/CustomSearchListView.dart';
 import 'package:bookly/Features/serach/presentation/Views/Widgets/CustomSearchTextFormFlied.dart';
 import 'package:flutter/material.dart';
