@@ -1,8 +1,7 @@
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomBottom
-    extends StatelessWidget {
+class CustomBottom extends StatelessWidget {
   const CustomBottom({
     super.key,
     required this.text,
@@ -12,21 +11,15 @@ class CustomBottom
     this.textcolor,
   });
 
-  final BorderRadiusGeometry?
-      borderRadius;
+  final BorderRadiusGeometry? borderRadius;
 
-  final Color?
-      textcolor;
-  final String
-      text;
-  final Color
-      backgroundColor;
-  final void Function()?
-      onPressed;
+  final Color? textcolor;
+  final String text;
+  final Color backgroundColor;
+  final void Function()? onPressed;
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return SizedBox(
       height: 53,
       child: TextButton(

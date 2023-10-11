@@ -1,15 +1,13 @@
 import 'package:bookly/Core/widgets/CustomBottom.dart';
 import 'package:flutter/material.dart';
 
-class CustomBookActions
-    extends StatelessWidget {
+class CustomBookActions extends StatelessWidget {
   const CustomBookActions({
     super.key,
   });
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(

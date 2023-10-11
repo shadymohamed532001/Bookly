@@ -6,14 +6,11 @@ import 'package:bookly/Features/Home/presentation/Views/widgets/SimilerBookDetil
 import 'package:bookly/Features/Home/presentation/Views/widgets/customBookRate.dart';
 import 'package:flutter/material.dart';
 
-class booksDetailsViewBody
-    extends StatelessWidget {
-  const booksDetailsViewBody(
-      {super.key});
+class booksDetailsViewBody extends StatelessWidget {
+  const booksDetailsViewBody({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
         SliverFillRemaining(
@@ -41,14 +38,11 @@ class booksDetailsViewBody
   }
 }
 
-class BookDetailSections
-    extends StatelessWidget {
-  const BookDetailSections(
-      {super.key});
+class BookDetailSections extends StatelessWidget {
+  const BookDetailSections({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         const CustomDetilsViewAppBar(),
@@ -95,14 +89,11 @@ class BookDetailSections
   }
 }
 
-class SimilerBookDetilsListViewSections
-    extends StatelessWidget {
-  const SimilerBookDetilsListViewSections(
-      {super.key});
+class SimilerBookDetilsListViewSections extends StatelessWidget {
+  const SimilerBookDetilsListViewSections({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Align(

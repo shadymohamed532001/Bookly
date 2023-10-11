@@ -1,14 +1,11 @@
 import 'package:bookly/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-class CustomListViewItemsphoto
-    extends StatelessWidget {
-  const CustomListViewItemsphoto(
-      {super.key});
+class CustomListViewItemsphoto extends StatelessWidget {
+  const CustomListViewItemsphoto({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 2.6 / 4,
       child: Container(

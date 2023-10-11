@@ -3,14 +3,11 @@ import 'package:bookly/Features/serach/presentation/Views/Widgets/CustomSearchLi
 import 'package:bookly/Features/serach/presentation/Views/Widgets/CustomSearchTextFormFlied.dart';
 import 'package:flutter/material.dart';
 
-class SearchViewBody
-    extends StatelessWidget {
-  const SearchViewBody(
-      {super.key});
+class SearchViewBody extends StatelessWidget {
+  const SearchViewBody({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return CustomScrollView(
       slivers: const [

@@ -1,14 +1,11 @@
 import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListViewItems.dart';
 import 'package:flutter/material.dart';
 
-class CustomSearchListView
-    extends StatelessWidget {
-  const CustomSearchListView(
-      {super.key});
+class CustomSearchListView extends StatelessWidget {
+  const CustomSearchListView({super.key});
 
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.zero,
       shrinkWrap: true,

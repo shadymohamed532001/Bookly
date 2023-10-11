@@ -1,16 +1,11 @@
 class BookEntite {
-  final String
-      image;
+  final String image;
 
-  final String
-      authorName;
-  final String
-      title;
+  final String authorName;
+  final String title;
 
-  final num
-      price;
-  final num
-      rating;
+  final num price;
+  final num rating;
 
   BookEntite({
     required this.price,
