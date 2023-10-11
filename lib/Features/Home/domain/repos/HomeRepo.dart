@@ -1,10 +1,11 @@
+import 'package:bookly/Core/errors/Failuers.dart';
 import 'package:bookly/Features/Home/domain/entites/bookEntite.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo {
-  Future<Either<int, List<BookEntite>>>
+  Future<Either<Failuers, List<BookEntite>>>
       featchFeaturedBook();
 
-  Future<List<BookEntite>>
+  Future<Either<Failuers, List<BookEntite>>>
       featchNewsBook();
 }

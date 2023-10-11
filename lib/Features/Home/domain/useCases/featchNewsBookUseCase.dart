@@ -4,18 +4,18 @@ import 'package:bookly/Features/Home/domain/entites/bookEntite.dart';
 import 'package:bookly/Features/Home/domain/repos/HomeRepo.dart';
 import 'package:dartz/dartz.dart';
 
-class FeatchFeaturedBook extends UseCase<
+class FeatchNewsBooksUseCase extends UseCase<
     List<BookEntite>,
     noParmiter> {
   final HomeRepo
       homeRepo;
 
-  FeatchFeaturedBook(
-      {required this.homeRepo});
+  FeatchNewsBooksUseCase({
+    required this.homeRepo,
+  });
 
-  @override
   Future<Either<Failuers, List<BookEntite>>>
       call([noParmiter? parameter]) {
-    return homeRepo.featchFeaturedBook();
+    return homeRepo.featchNewsBook();
   }
 }
