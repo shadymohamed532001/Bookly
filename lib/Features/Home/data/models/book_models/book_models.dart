@@ -34,12 +34,12 @@ class BookModels
     this.accessInfo,
     this.searchInfo,
   }) : super(
-          bookid: id,
-          price: null,
-          rating: null,
-          image: '',
-          authorName: '',
-          title: '',
+          bookid: id!,
+          price: saleInfo?.listPrice?.amount,
+          rating: 0.0,
+          image: volumeInfo?.imageLinks?.thumbnail ?? '',
+          authorName: volumeInfo?.authors?.first ?? 'No Name',
+          title: volumeInfo!.title!,
         );
 
   factory BookModels.fromJson(Map<String, dynamic> json) =>
