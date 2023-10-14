@@ -5,31 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-void
-    main() async {
-  await Hive
-      .initFlutter();
-  Hive.registerAdapter(
-      BookEntiteAdapter());
-  await Hive.openBox(
-      KFeaturedbox);
-  await Hive.openBox(
-      KNewsbox);
-  runApp(
-      const Bookly());
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(BookEntiteAdapter());
+  await Hive.openBox(KFeaturedbox);
+  await Hive.openBox(KNewsbox);
+  runApp(const Bookly());
 }
 
 class KFeaturedlybox {}
 
-class Bookly
-    extends StatelessWidget {
-  const Bookly(
-      {super.key});
+class Bookly extends StatelessWidget {
+  const Bookly({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget
-      build(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       theme: ThemeData.dark().copyWith(
