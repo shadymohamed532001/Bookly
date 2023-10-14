@@ -1,26 +1,31 @@
+import 'package:bookly/Constance.dart';
 import 'package:bookly/Features/Home/domain/entites/bookEntite.dart';
+import 'package:hive/hive.dart';
 
 abstract class HomeLocalDataSoureces {
-  Future<List<BookEntite>>
+  List<BookEntite>
       featchFeaturedBook();
 
-  Future<List<BookEntite>>
+  List<BookEntite>
       featchNewsBook();
 }
 
-class HomeLocalDataSourcesImpl
+class HomeLocalDataSourecesImpl
     extends HomeLocalDataSoureces {
   @override
-  Future<List<BookEntite>>
+  List<BookEntite>
       featchFeaturedBook() {
-    // TODO: implement featchFeaturedBook
-    throw UnimplementedError();
+    var box =
+        Hive.box<BookEntite>(KFeaturedbox);
+    return box.values.toList();
   }
 
   @override
-  Future<List<BookEntite>>
+  List<BookEntite>
       featchNewsBook() {
-    // TODO: implement featchNewsBook
-    throw UnimplementedError();
+    var box =
+        Hive.box<BookEntite>(KNewsbox);
+
+    return box.values.toList();
   }
 }
