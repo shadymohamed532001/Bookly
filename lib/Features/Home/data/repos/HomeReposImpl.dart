@@ -1,9 +1,12 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:bookly/Core/errors/Failuers.dart';
 import 'package:bookly/Features/Home/data/dataSources/HomeLocalDataSources/HomeLocalDataSources.dart';
 import 'package:bookly/Features/Home/data/dataSources/HomeRemoteDataSources/HomeRemoteDataSources.dart';
 import 'package:bookly/Features/Home/domain/entites/bookEntite.dart';
 import 'package:bookly/Features/Home/domain/repos/HomeRepo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl extends HomeRepo {
   final HomeRemoteDataSoureces homeRemoteDataSoureces;
@@ -23,7 +26,12 @@ class HomeRepoImpl extends HomeRepo {
       books = await homeRemoteDataSoureces.featchFeaturedBook();
       return right(books);
     } catch (e) {
-      return left(ServiersFailuers());
+      if (e is DioError) {
+        return left(
+          ServiersFailuers.fromDioError(e),
+        );
+      }
+      return left(ServiersFailuers(massage: e.toString()));
     }
   }
 
@@ -40,7 +48,12 @@ class HomeRepoImpl extends HomeRepo {
       books = await homeRemoteDataSoureces.featchNewsBook();
       return right(books);
     } catch (e) {
-      return left(Failuers());
+      if (e is DioError) {
+        return left(
+          ServiersFailuers.fromDioError(e),
+        );
+      }
+      return left(ServiersFailuers(massage: e.toString()));
     }
   }
 }
