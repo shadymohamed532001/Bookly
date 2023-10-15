@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:bloc/bloc.dart';
 import 'package:bookly/Features/Home/domain/entites/bookEntite.dart';
 import 'package:bookly/Features/Home/domain/useCases/featchNewsBookUseCase.dart';

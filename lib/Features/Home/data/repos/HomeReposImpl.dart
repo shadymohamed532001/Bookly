@@ -12,8 +12,9 @@ class HomeRepoImpl extends HomeRepo {
   final HomeRemoteDataSoureces homeRemoteDataSoureces;
   final HomeLocalDataSoureces homeLocalDataSoureces;
 
-  HomeRepoImpl(this.homeLocalDataSoureces,
-      {required this.homeRemoteDataSoureces});
+  HomeRepoImpl(
+      {required this.homeRemoteDataSoureces,
+      required this.homeLocalDataSoureces});
   @override
   Future<Either<Failuers, List<BookEntite>>> featchFeaturedBook() async {
     List<BookEntite> books;
