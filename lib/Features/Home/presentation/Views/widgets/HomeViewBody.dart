@@ -1,7 +1,7 @@
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/BestSillerListView.dart';
 import 'package:bookly/Features/Home/presentation/Views/widgets/CustomAppBar.dart';
-import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListView.dart';
+import 'package:bookly/Features/Home/presentation/Views/widgets/CustomFeaturesListViewBuilder.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
             children: [
               const CustomAppBar(),
               SizedBox(height: MediaQuery.of(context).size.height / 50),
-              const CustomFeaturesListView(),
+              const CustomFeaturesListViewBuilder(),
               SizedBox(height: MediaQuery.of(context).size.height / 50),
               const Padding(
                 padding: EdgeInsets.all(10),
